@@ -28,7 +28,7 @@
     <div v-else>---我们的内容</div>
 
     <ul>
-        <li v-for="dog in dogs" >{{dog}}</li>
+        <li v-for="(dog, i) in dogs" >{{dog}}:{{i}}</li>
     </ul>
 
     <ul>
