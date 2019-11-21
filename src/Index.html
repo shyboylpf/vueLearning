@@ -49,6 +49,9 @@
 
     <p>自从你打开这个页面 , 已经过了 {{seconds}} 秒了.</p>
 
+    <input type="text" v-model="inputText">
+    <p>inputText: {{inputText}}</p>
+
 </div>
 
 <script src="https://unpkg.com/vue"></script>
@@ -69,12 +72,13 @@
             },
             buttonType:'submit',
             buttonDisabled:true,
-            seconds:0
+            seconds:0,
+            inputText:'initial value'
         },
         created(){
             setInterval(()=>{
                 this.seconds++;
-                this.buttonDisabled=!this.buttonDisabled;
+                this.buttonDisabled=!this.buttonDisabled; 
                 this.averageRent.name="some user"+this.seconds;
             }, 1000);
         }
@@ -85,4 +89,7 @@
         name:"some user1"
     });
     //Vue.set(vm.averageRent, 'name', 'some user2');
+    vm.dogs[1]="another dog1.";
+    vm.dogs.splice(2,1,"antoher dog2");
+    Vue.set(vm.dogs, 2, "another dog3.");
 </script>
