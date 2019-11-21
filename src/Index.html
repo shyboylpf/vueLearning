@@ -54,7 +54,7 @@
 <script src="https://unpkg.com/vue"></script>
 
 <script>
-    new Vue({
+    var vm = new Vue({
         el:'#app',
         data:{
             hours:new Date().getHours(),
@@ -74,7 +74,11 @@
         created(){
             setInterval(()=>{
                 this.seconds++;
+                this.buttonDisabled=!this.buttonDisabled;
+                this.averageRent.name="some user"+seconds;
             }, 1000);
         }
     });
+
+    vm.averageRent.name='some user';
 </script>
