@@ -5,17 +5,20 @@
     <p v-if="hours<18 && hours>12">Afternoon</p>
     <p v-if="hours>18">Evening</p>
 
+    <p v-if="path==='/'">你正位于首页</p>
+    <p v-else>你正位于{{path}}</p>
+
 </div>
 
 <script src="https://unpkg.com/vue"></script>
 
 <script>
-    var hours = new Date().getHours();
     new Vue({
         el:'#app',
         data:{
             hours:new Date().getHours(),
-            greetee:'world'
+            greetee:'world',
+            path:location.pathname
         },
         created(){}
     });
