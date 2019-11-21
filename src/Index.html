@@ -1,0 +1,19 @@
+<div id="app">
+    <p v-if="hours<12">Morning</p>
+    <p v-if="hours<18 && hours>12">Afternoon</p>
+    <p v-if="hours>18">Evening</p>
+
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+
+<script>
+    var hours = new Date().getHours();
+    new Vue({
+        el:'#app',
+        data:{
+            hours:new Date().getHours()
+        },
+        created(){}
+    });
+</script>
