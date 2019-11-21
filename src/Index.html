@@ -47,6 +47,8 @@
 
     <button :disabled="buttonDisabled">Test button disabled 2</button>
 
+    <p>自从你打开这个页面 , 已经过了 {{seconds}} 秒了.</p>
+
 </div>
 
 <script src="https://unpkg.com/vue"></script>
@@ -66,8 +68,13 @@
                 NYC:3680
             },
             buttonType:'submit',
-            buttonDisabled:true
+            buttonDisabled:true,
+            seconds:0
         },
-        created(){}
+        created(){
+            setInterval(()=>{
+                this.seconds++;
+            }, 1000);
+        }
     });
 </script>
