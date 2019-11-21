@@ -43,6 +43,10 @@
 
     <button v-bind:type='buttonType'>Test button</button>
 
+    <button v-bind:disabled="buttonDisabled">Test button disabled</button>
+
+    <button :disabled="buttonDisabled">Test button disabled 2</button>
+
 </div>
 
 <script src="https://unpkg.com/vue"></script>
@@ -61,7 +65,8 @@
                 paris:1730,
                 NYC:3680
             },
-            buttonType:'submit'
+            buttonType:'submit',
+            buttonDisabled:true
         },
         created(){}
     });
