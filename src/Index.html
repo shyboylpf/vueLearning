@@ -1,4 +1,6 @@
 <div id="app">
+    <p>Hello , {{greetee}}</p>
+
     <p v-if="hours<12">Morning</p>
     <p v-if="hours<18 && hours>12">Afternoon</p>
     <p v-if="hours>18">Evening</p>
@@ -12,7 +14,8 @@
     new Vue({
         el:'#app',
         data:{
-            hours:new Date().getHours()
+            hours:new Date().getHours(),
+            greetee:'world'
         },
         created(){}
     });
