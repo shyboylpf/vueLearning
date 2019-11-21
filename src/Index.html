@@ -75,10 +75,14 @@
             setInterval(()=>{
                 this.seconds++;
                 this.buttonDisabled=!this.buttonDisabled;
-                this.averageRent.name="some user"+seconds;
+                this.averageRent.name="some user"+this.seconds;
             }, 1000);
         }
     });
 
-    vm.averageRent.name='some user';
+    //vm.averageRent.name='some user0';
+    vm.averageRent = Object.assign({}, vm.averageRent, {
+        name:"some user1"
+    });
+    //Vue.set(vm.averageRent, 'name', 'some user2');
 </script>
