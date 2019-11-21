@@ -19,6 +19,10 @@
     <div v-show="true">one</div>
     <div v-show="false">two</div>
 
+    <div v-show="user">
+        <p>User name: {{user.name}}</p>
+    </div>
+
 </div>
 
 <script src="https://unpkg.com/vue"></script>
@@ -30,7 +34,8 @@
             hours:new Date().getHours(),
             greetee:'world',
             path:location.pathname,
-            dogs:['Rex', 'Rover', 'Henrietta', 'Alan']
+            dogs:['Rex', 'Rover', 'Henrietta', 'Alan'],
+            user:undefined
         },
         created(){}
     });
