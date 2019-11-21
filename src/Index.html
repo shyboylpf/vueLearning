@@ -8,6 +8,11 @@
     <p v-if="path==='/'">你正位于首页</p>
     <p v-else>你正位于{{path}}</p>
 
+    <p>The second dog's name is : {{dogs[1]}}</p>
+    <p>
+        All dog's name is: {{dogs}}
+    </p>
+
 </div>
 
 <script src="https://unpkg.com/vue"></script>
@@ -18,7 +23,8 @@
         data:{
             hours:new Date().getHours(),
             greetee:'world',
-            path:location.pathname
+            path:location.pathname,
+            dogs:['Rex', 'Rover', 'Henrietta', 'Alan']
         },
         created(){}
     });
