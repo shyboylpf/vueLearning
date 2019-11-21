@@ -41,6 +41,8 @@
         <li v-for="n in 10">{{n}}</li>
     </ul>
 
+    <button v-bind:type='buttonType'>Test button</button>
+
 </div>
 
 <script src="https://unpkg.com/vue"></script>
@@ -58,7 +60,8 @@
                 london:1650,
                 paris:1730,
                 NYC:3680
-            }
+            },
+            buttonType:'submit'
         },
         created(){}
     });
