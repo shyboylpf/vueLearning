@@ -31,6 +31,12 @@
         <li v-for="dog in dogs" >{{dog}}</li>
     </ul>
 
+    <ul>
+        <li v-for="(rent, city) in averageRent">
+            {{city}} 的平均租金是 ${{rent}}
+        </li>
+    </ul>
+
 </div>
 
 <script src="https://unpkg.com/vue"></script>
@@ -43,7 +49,12 @@
             greetee:'world',
             path:location.pathname,
             dogs:['Rex', 'Rover', 'Henrietta', 'Alan'],
-            user:undefined
+            user:undefined,
+            averageRent:{
+                london:1650,
+                paris:1730,
+                NYC:3680
+            }
         },
         created(){}
     });
