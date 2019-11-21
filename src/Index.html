@@ -19,9 +19,13 @@
     <div v-show="true">one</div>
     <div v-show="false">two</div>
 
-    <div v-show="user">
+    <div v-if="user">
         <p>User name: {{user.name}}</p>
     </div>
+
+    <div v-if="state === 'loading'">加载中...</div>
+    <div v-else-if="state==='error'">出错了</div>
+    <div v-else>---我们的内容</div>
 
 </div>
 
